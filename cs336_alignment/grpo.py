@@ -18,7 +18,6 @@ from torch import Tensor
 from .masking import masked_mean
 from .policy_losses import compute_policy_gradient_loss
 
-
 def grpo_microbatch_train_step(
     policy_log_probs: Tensor,
     response_mask: Tensor,

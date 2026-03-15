@@ -38,7 +38,10 @@ def sft_microbatch_train_step(
     token_loss = -policy_log_probs
 
     denom = 1.0 if normalize_constant is None else float(normalize_constant)
-    loss = masked_normalize(token_loss, response_mask, dim=None, normalize_constant=denom)
+    per_example_loss = masked_normalize(
+        token_loss, response_mask, dim=1, normalize_constant=denom
+    )
+    loss = per_example_loss.mean()
     loss = loss / float(gradient_accumulation_steps)
 
     loss.backward()
@@ -48,4 +51,3 @@ def sft_microbatch_train_step(
         token_loss, response_mask, dim=None, normalize_constant=1.0
     )
     return loss, {"token_loss_sum": token_loss_sum}
-
