@@ -15,8 +15,6 @@ import torch
 from torch import Tensor
 from transformers import PreTrainedTokenizerBase
 
-from .text_join import join_prompt_and_output
-
 
 def tokenize_prompt_and_output(
     prompt_strs: list[str],
@@ -37,29 +35,12 @@ def tokenize_prompt_and_output(
     返回张量的形状（与单元测试一致）：
     - input_ids / labels / response_mask: (batch_size, max_seq_len - 1)
     """
-    if len(prompt_strs) != len(output_strs):
+    if len(prompt_strs) != len(output_strs): # 这里，实际上看的是batch size
         raise ValueError(
             "prompt_strs and output_strs must have the same length, "
             f"got {len(prompt_strs)} and {len(output_strs)}"
         )
 
-    # 先把 prompt+output 拼成完整序列，再 batch tokenize。
-    # 这里使用 padding=True 以便得到统一长度，并利用 attention_mask 找到真实长度。
-    full_texts = [
-        join_prompt_and_output(prompt, output)
-        for prompt, output in zip(prompt_strs, output_strs)
-    ]
-    full_enc = tokenizer(
-        full_texts,
-        add_special_tokens=True,
-        padding=True,
-        truncation=False,
-        return_tensors="pt",
-        return_attention_mask=True,
-    )
-
-    # prompt 单独 tokenize（不 padding），只为了获取每个样本的 prompt token 数 P。
-    # add_special_tokens=True 的原因是要与 full_enc 的计数口径一致（例如 BOS）。
     prompt_enc = tokenizer(
         prompt_strs,
         add_special_tokens=True,
@@ -67,9 +48,44 @@ def tokenize_prompt_and_output(
         truncation=False,
         return_attention_mask=False,
     )
+    output_enc = tokenizer(
+        output_strs,
+        add_special_tokens=False,
+        padding=False,
+        truncation=False,
+        return_attention_mask=False,
+    )
 
-    full_input_ids = full_enc["input_ids"]
-    full_attention_mask = full_enc["attention_mask"]
+    prompt_ids_list: list[list[int]] = prompt_enc["input_ids"]
+    output_ids_list: list[list[int]] = output_enc["input_ids"]
+
+    full_ids_list: list[list[int]] = [
+        prompt_ids + output_ids
+        for prompt_ids, output_ids in zip(prompt_ids_list, output_ids_list)
+    ]
+
+    max_len = max((len(ids) for ids in full_ids_list), default=0)
+    pad_id = tokenizer.pad_token_id
+    if pad_id is None:
+        pad_id = tokenizer.eos_token_id
+    if pad_id is None:
+        raise ValueError("tokenizer must define pad_token_id or eos_token_id for padding")
+
+    full_input_ids = torch.full(
+        (len(full_ids_list), max_len),
+        fill_value=int(pad_id),
+        dtype=torch.long,
+    )
+    full_attention_mask = torch.zeros(
+        (len(full_ids_list), max_len),
+        dtype=torch.long,
+    )
+
+    for i, ids in enumerate(full_ids_list):
+        if not ids:
+            continue
+        full_input_ids[i, : len(ids)] = torch.tensor(ids, dtype=torch.long)
+        full_attention_mask[i, : len(ids)] = 1
 
     input_ids = full_input_ids[:, :-1].contiguous()
     labels = full_input_ids[:, 1:].contiguous()
@@ -77,7 +93,7 @@ def tokenize_prompt_and_output(
     # response_mask 与 labels 对齐：True 表示该 label 位置属于 output 部分。
     response_mask = torch.zeros_like(labels, dtype=torch.bool)
 
-    for i, prompt_ids in enumerate(prompt_enc["input_ids"]):
+    for i, prompt_ids in enumerate(prompt_ids_list):
         prompt_len = len(prompt_ids)
         full_len = int(full_attention_mask[i].sum().item())
 
@@ -89,4 +105,3 @@ def tokenize_prompt_and_output(
             response_mask[i, start:end] = True
 
     return {"input_ids": input_ids, "labels": labels, "response_mask": response_mask}
-

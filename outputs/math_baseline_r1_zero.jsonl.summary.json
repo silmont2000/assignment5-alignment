@@ -1,0 +1,11 @@
+{
+  "num_examples": 1319,
+  "mean_reward": 0.16982562547384383,
+  "mean_format_reward": 0.510235026535254,
+  "mean_answer_reward": 0.16982562547384383,
+  "counts": {
+    "format1_answer1": 224,
+    "format1_answer0": 449,
+    "format0_answer0": 646
+  }
+}
