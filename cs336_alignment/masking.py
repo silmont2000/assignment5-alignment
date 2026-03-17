@@ -28,20 +28,23 @@ def masked_mean(tensor: Tensor, mask: Tensor, dim: int | None = None) -> Tensor:
     Returns:
         与 torch.mean 类似的形状，但忽略 mask==False 的元素。
 
-    注意：当某个 slice 的有效元素数为 0 时，返回 0（避免 NaN）。
+    注意：当某个 slice 的有效元素数为 0 时，返回 NaN（与 torch.mean 的行为一致）。
     """
     mask_f = mask.to(dtype=tensor.dtype)
     masked = tensor * mask_f
 
     if dim is None:
         denom = mask_f.sum()
-        if denom.item() == 0:
-            return torch.zeros((), dtype=tensor.dtype, device=tensor.device)
-        return masked.sum() / denom
+        numer = masked.sum()
+        return torch.where(
+            denom > 0,
+            numer / denom,
+            torch.full_like(numer, float("nan")),
+        )
 
     denom = mask_f.sum(dim=dim)
     numer = masked.sum(dim=dim)
-    return torch.where(denom > 0, numer / denom, torch.zeros_like(numer))
+    return torch.where(denom > 0, numer / denom, torch.full_like(numer, float("nan")))
 
 
 def masked_normalize(
@@ -63,4 +66,3 @@ def masked_normalize(
     masked = tensor * mask_f
     summed = masked.sum() if dim is None else masked.sum(dim=dim)
     return summed / float(normalize_constant)
-

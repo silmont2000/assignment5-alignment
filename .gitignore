@@ -165,3 +165,323 @@ cython_debug/
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
+runs/sft_smoke_train_only/added_tokens.json
+runs/sft_smoke_train_only/config.json
+runs/sft_smoke_train_only/generation_config.json
+runs/sft_smoke_train_only/merges.txt
+runs/sft_smoke_train_only/metrics.jsonl
+runs/sft_smoke_train_only/model.safetensors
+runs/sft_smoke_train_only/special_tokens_map.json
+runs/sft_smoke_train_only/tokenizer_config.json
+runs/sft_smoke_train_only/tokenizer.json
+runs/sft_smoke_train_only/vocab.json
+runs/sft_smoke_with_eval/added_tokens.json
+runs/sft_smoke_with_eval/config.json
+runs/sft_smoke_with_eval/generation_config.json
+runs/sft_smoke_with_eval/merges.txt
+runs/sft_smoke_with_eval/metrics.jsonl
+runs/sft_smoke_with_eval/model.safetensors
+runs/sft_smoke_with_eval/special_tokens_map.json
+runs/sft_smoke_with_eval/tokenizer_config.json
+runs/sft_smoke_with_eval/tokenizer.json
+runs/sft_smoke_with_eval/vocab.json
+wandb/latest-run
+wandb/run-20260316_121028-bialnrev/run-bialnrev.wandb
+wandb/run-20260316_121028-bialnrev/files/config.yaml
+wandb/run-20260316_121028-bialnrev/files/requirements.txt
+wandb/run-20260316_121028-bialnrev/files/wandb-metadata.json
+wandb/run-20260316_121028-bialnrev/files/wandb-summary.json
+wandb/run-20260316_143721-j3y7ocxr/run-j3y7ocxr.wandb
+wandb/run-20260316_143721-j3y7ocxr/files/config.yaml
+wandb/run-20260316_143721-j3y7ocxr/files/requirements.txt
+wandb/run-20260316_143721-j3y7ocxr/files/wandb-metadata.json
+wandb/run-20260316_143721-j3y7ocxr/files/wandb-summary.json
+wandb/run-20260316_144031-16ex84a9/run-16ex84a9.wandb
+wandb/run-20260316_144031-16ex84a9/files/config.yaml
+wandb/run-20260316_144031-16ex84a9/files/requirements.txt
+wandb/run-20260316_144031-16ex84a9/files/wandb-metadata.json
+wandb/run-20260316_144031-16ex84a9/files/wandb-summary.json
+wandb/run-20260316_144203-avvxkks5/run-avvxkks5.wandb
+wandb/run-20260316_144203-avvxkks5/files/config.yaml
+wandb/run-20260316_144203-avvxkks5/files/requirements.txt
+wandb/run-20260316_144203-avvxkks5/files/wandb-metadata.json
+wandb/run-20260316_144203-avvxkks5/files/wandb-summary.json
+wandb/run-20260316_144956-7dqstmww/run-7dqstmww.wandb
+wandb/run-20260316_144956-7dqstmww/files/config.yaml
+wandb/run-20260316_144956-7dqstmww/files/requirements.txt
+wandb/run-20260316_144956-7dqstmww/files/wandb-metadata.json
+wandb/run-20260316_144956-7dqstmww/files/wandb-summary.json
+wandb/run-20260316_145531-q2k61zdz/run-q2k61zdz.wandb
+wandb/run-20260316_145531-q2k61zdz/files/config.yaml
+wandb/run-20260316_145531-q2k61zdz/files/requirements.txt
+wandb/run-20260316_145531-q2k61zdz/files/wandb-metadata.json
+wandb/run-20260316_145531-q2k61zdz/files/wandb-summary.json
+wandb/run-20260316_150011-2l0n307u/run-2l0n307u.wandb
+wandb/run-20260316_150011-2l0n307u/files/config.yaml
+wandb/run-20260316_150011-2l0n307u/files/requirements.txt
+wandb/run-20260316_150011-2l0n307u/files/wandb-metadata.json
+wandb/run-20260316_150011-2l0n307u/files/wandb-summary.json
+wandb/run-20260316_150509-d6n8jmnv/run-d6n8jmnv.wandb
+wandb/run-20260316_150509-d6n8jmnv/files/config.yaml
+wandb/run-20260316_150509-d6n8jmnv/files/requirements.txt
+wandb/run-20260316_150509-d6n8jmnv/files/wandb-metadata.json
+wandb/run-20260316_150509-d6n8jmnv/files/wandb-summary.json
+wandb/run-20260316_150917-py3mtefy/run-py3mtefy.wandb
+wandb/run-20260316_150917-py3mtefy/files/config.yaml
+wandb/run-20260316_150917-py3mtefy/files/requirements.txt
+wandb/run-20260316_150917-py3mtefy/files/wandb-metadata.json
+wandb/run-20260316_150917-py3mtefy/files/wandb-summary.json
+wandb/run-20260316_152641-0wy2vswb/run-0wy2vswb.wandb
+wandb/run-20260316_152641-0wy2vswb/files/config.yaml
+wandb/run-20260316_152641-0wy2vswb/files/requirements.txt
+wandb/run-20260316_152641-0wy2vswb/files/wandb-metadata.json
+wandb/run-20260316_152641-0wy2vswb/files/wandb-summary.json
+wandb/run-20260316_152800-0xxg4pix/run-0xxg4pix.wandb
+wandb/run-20260316_152800-0xxg4pix/files/config.yaml
+wandb/run-20260316_152800-0xxg4pix/files/requirements.txt
+wandb/run-20260316_152800-0xxg4pix/files/wandb-metadata.json
+wandb/run-20260316_152800-0xxg4pix/files/wandb-summary.json
+wandb/run-20260316_153228-20u23j35/run-20u23j35.wandb
+wandb/run-20260316_153228-20u23j35/files/config.yaml
+wandb/run-20260316_153228-20u23j35/files/requirements.txt
+wandb/run-20260316_153228-20u23j35/files/wandb-metadata.json
+wandb/run-20260316_153228-20u23j35/files/wandb-summary.json
+wandb/run-20260316_154009-hhayug7p/run-hhayug7p.wandb
+wandb/run-20260316_154009-hhayug7p/files/config.yaml
+wandb/run-20260316_154009-hhayug7p/files/requirements.txt
+wandb/run-20260316_154009-hhayug7p/files/wandb-metadata.json
+wandb/run-20260316_154009-hhayug7p/files/wandb-summary.json
+wandb/run-20260316_163142-ozl2rk9f/run-ozl2rk9f.wandb
+wandb/run-20260316_163142-ozl2rk9f/files/config.yaml
+wandb/run-20260316_163142-ozl2rk9f/files/requirements.txt
+wandb/run-20260316_163142-ozl2rk9f/files/wandb-metadata.json
+wandb/run-20260316_163142-ozl2rk9f/files/wandb-summary.json
+wandb/run-20260316_163958-f4bytv81/run-f4bytv81.wandb
+wandb/run-20260316_163958-f4bytv81/files/config.yaml
+wandb/run-20260316_163958-f4bytv81/files/requirements.txt
+wandb/run-20260316_163958-f4bytv81/files/wandb-metadata.json
+wandb/run-20260316_163958-f4bytv81/files/wandb-summary.json
+wandb/run-20260316_165129-cn3vkqyi/run-cn3vkqyi.wandb
+wandb/run-20260316_165129-cn3vkqyi/files/config.yaml
+wandb/run-20260316_165129-cn3vkqyi/files/requirements.txt
+wandb/run-20260316_165129-cn3vkqyi/files/wandb-metadata.json
+wandb/run-20260316_165129-cn3vkqyi/files/wandb-summary.json
+wandb/run-20260316_170942-8qk4lfxs/run-8qk4lfxs.wandb
+wandb/run-20260316_170942-8qk4lfxs/files/config.yaml
+wandb/run-20260316_170942-8qk4lfxs/files/requirements.txt
+wandb/run-20260316_170942-8qk4lfxs/files/wandb-metadata.json
+wandb/run-20260316_170942-8qk4lfxs/files/wandb-summary.json
+scripts/train_grpo.py
+.gitignore
+wandb/run-20260316_174405-qbflbrab/run-qbflbrab.wandb
+wandb/run-20260316_174405-qbflbrab/files/config.yaml
+wandb/run-20260316_174405-qbflbrab/files/requirements.txt
+wandb/run-20260316_174405-qbflbrab/files/wandb-metadata.json
+wandb/run-20260316_174405-qbflbrab/files/wandb-summary.json
+wandb/run-20260316_174609-gtddbxe9/run-gtddbxe9.wandb
+wandb/run-20260316_174609-gtddbxe9/files/config.yaml
+wandb/run-20260316_174609-gtddbxe9/files/requirements.txt
+wandb/run-20260316_174609-gtddbxe9/files/wandb-metadata.json
+wandb/run-20260316_174609-gtddbxe9/files/wandb-summary.json
+wandb/run-20260316_174715-bkfdsfkr/run-bkfdsfkr.wandb
+wandb/run-20260316_174715-bkfdsfkr/files/config.yaml
+wandb/run-20260316_174715-bkfdsfkr/files/requirements.txt
+wandb/run-20260316_174715-bkfdsfkr/files/wandb-metadata.json
+wandb/run-20260316_174715-bkfdsfkr/files/wandb-summary.json
+wandb/run-20260316_182425-s0rqcutc/run-s0rqcutc.wandb
+wandb/run-20260316_182425-s0rqcutc/files/config.yaml
+wandb/run-20260316_182425-s0rqcutc/files/requirements.txt
+wandb/run-20260316_182425-s0rqcutc/files/wandb-metadata.json
+wandb/run-20260316_182425-s0rqcutc/files/wandb-summary.json
+wandb/run-20260316_204319-2uhaew88/run-2uhaew88.wandb
+wandb/run-20260316_204319-2uhaew88/files/config.yaml
+wandb/run-20260316_204319-2uhaew88/files/requirements.txt
+wandb/run-20260316_204319-2uhaew88/files/wandb-metadata.json
+wandb/run-20260316_204319-2uhaew88/files/wandb-summary.json
+wandb/run-20260316_210534-nw9a8tkt/run-nw9a8tkt.wandb
+wandb/run-20260316_210534-nw9a8tkt/files/config.yaml
+wandb/run-20260316_210534-nw9a8tkt/files/requirements.txt
+wandb/run-20260316_210534-nw9a8tkt/files/wandb-metadata.json
+wandb/run-20260316_210534-nw9a8tkt/files/wandb-summary.json
+wandb/run-20260316_210831-nmh9t0p5/run-nmh9t0p5.wandb
+wandb/run-20260316_210831-nmh9t0p5/files/config.yaml
+wandb/run-20260316_210831-nmh9t0p5/files/requirements.txt
+wandb/run-20260316_210831-nmh9t0p5/files/wandb-metadata.json
+wandb/run-20260316_210831-nmh9t0p5/files/wandb-summary.json
+wandb/run-20260316_211233-d53s9228/run-d53s9228.wandb
+wandb/run-20260316_211233-d53s9228/files/config.yaml
+wandb/run-20260316_211233-d53s9228/files/requirements.txt
+wandb/run-20260316_211233-d53s9228/files/wandb-metadata.json
+wandb/run-20260316_211233-d53s9228/files/wandb-summary.json
+wandb/run-20260316_212350-fs1r0d50/run-fs1r0d50.wandb
+wandb/run-20260316_212350-fs1r0d50/files/config.yaml
+wandb/run-20260316_212350-fs1r0d50/files/requirements.txt
+wandb/run-20260316_212350-fs1r0d50/files/wandb-metadata.json
+wandb/run-20260316_212350-fs1r0d50/files/wandb-summary.json
+wandb/run-20260316_212527-dkrnpd0v/run-dkrnpd0v.wandb
+wandb/run-20260316_212527-dkrnpd0v/files/config.yaml
+wandb/run-20260316_212527-dkrnpd0v/files/requirements.txt
+wandb/run-20260316_212527-dkrnpd0v/files/wandb-metadata.json
+wandb/run-20260316_212527-dkrnpd0v/files/wandb-summary.json
+wandb/run-20260316_213910-cynon63r/run-cynon63r.wandb
+wandb/run-20260316_213910-cynon63r/files/config.yaml
+wandb/run-20260316_213910-cynon63r/files/requirements.txt
+wandb/run-20260316_213910-cynon63r/files/wandb-metadata.json
+wandb/run-20260316_213910-cynon63r/files/wandb-summary.json
+wandb/run-20260316_214540-6xjlxh8j/run-6xjlxh8j.wandb
+wandb/run-20260316_214540-6xjlxh8j/files/config.yaml
+wandb/run-20260316_214540-6xjlxh8j/files/requirements.txt
+wandb/run-20260316_214540-6xjlxh8j/files/wandb-metadata.json
+wandb/run-20260316_214540-6xjlxh8j/files/wandb-summary.json
+wandb/run-20260316_215425-zk3hxbxo/run-zk3hxbxo.wandb
+wandb/run-20260316_215425-zk3hxbxo/files/config.yaml
+wandb/run-20260316_215425-zk3hxbxo/files/requirements.txt
+wandb/run-20260316_215425-zk3hxbxo/files/wandb-metadata.json
+wandb/run-20260316_215425-zk3hxbxo/files/wandb-summary.json
+wandb/run-20260316_220003-j2202m3y/run-j2202m3y.wandb
+wandb/run-20260316_220003-j2202m3y/files/config.yaml
+wandb/run-20260316_220003-j2202m3y/files/requirements.txt
+wandb/run-20260316_220003-j2202m3y/files/wandb-metadata.json
+wandb/run-20260316_220003-j2202m3y/files/wandb-summary.json
+wandb/run-20260316_224818-uvqj60q7/run-uvqj60q7.wandb
+wandb/run-20260316_224818-uvqj60q7/files/config.yaml
+wandb/run-20260316_224818-uvqj60q7/files/requirements.txt
+wandb/run-20260316_224818-uvqj60q7/files/wandb-metadata.json
+wandb/run-20260316_224818-uvqj60q7/files/wandb-summary.json
+wandb/run-20260316_225753-ojnwwwco/run-ojnwwwco.wandb
+wandb/run-20260316_225753-ojnwwwco/files/config.yaml
+wandb/run-20260316_225753-ojnwwwco/files/requirements.txt
+wandb/run-20260316_225753-ojnwwwco/files/wandb-metadata.json
+wandb/run-20260316_225753-ojnwwwco/files/wandb-summary.json
+wandb/run-20260316_231500-consk2v5/run-consk2v5.wandb
+wandb/run-20260316_231500-consk2v5/files/config.yaml
+wandb/run-20260316_231500-consk2v5/files/requirements.txt
+wandb/run-20260316_231500-consk2v5/files/wandb-metadata.json
+wandb/run-20260316_231500-consk2v5/files/wandb-summary.json
+wandb/run-20260316_233204-b4wdwthk/run-b4wdwthk.wandb
+wandb/run-20260316_233204-b4wdwthk/files/config.yaml
+wandb/run-20260316_233204-b4wdwthk/files/requirements.txt
+wandb/run-20260316_233204-b4wdwthk/files/wandb-metadata.json
+wandb/run-20260316_233204-b4wdwthk/files/wandb-summary.json
+wandb/run-20260316_233502-ph86mobi/run-ph86mobi.wandb
+wandb/run-20260316_233502-ph86mobi/files/config.yaml
+wandb/run-20260316_233502-ph86mobi/files/requirements.txt
+wandb/run-20260316_233502-ph86mobi/files/wandb-metadata.json
+wandb/run-20260316_233502-ph86mobi/files/wandb-summary.json
+wandb/run-20260316_233635-xt5j4d86/run-xt5j4d86.wandb
+wandb/run-20260316_233635-xt5j4d86/files/config.yaml
+wandb/run-20260316_233635-xt5j4d86/files/requirements.txt
+wandb/run-20260316_233635-xt5j4d86/files/wandb-metadata.json
+wandb/run-20260316_233635-xt5j4d86/files/wandb-summary.json
+wandb/run-20260316_234723-zp0mp6e5/run-zp0mp6e5.wandb
+wandb/run-20260316_234723-zp0mp6e5/files/config.yaml
+wandb/run-20260316_234723-zp0mp6e5/files/requirements.txt
+wandb/run-20260316_234723-zp0mp6e5/files/wandb-metadata.json
+wandb/run-20260316_234723-zp0mp6e5/files/wandb-summary.json
+wandb/run-20260317_000137-qyk5bizk/run-qyk5bizk.wandb
+wandb/run-20260317_000137-qyk5bizk/files/config.yaml
+wandb/run-20260317_000137-qyk5bizk/files/requirements.txt
+wandb/run-20260317_000137-qyk5bizk/files/wandb-metadata.json
+wandb/run-20260317_000137-qyk5bizk/files/wandb-summary.json
+wandb/run-20260317_000940-uvqj60q7/run-uvqj60q7.wandb
+wandb/run-20260317_000940-uvqj60q7/files/config.yaml
+wandb/run-20260317_000940-uvqj60q7/files/requirements.txt
+wandb/run-20260317_000940-uvqj60q7/files/wandb-metadata.json
+wandb/run-20260317_000940-uvqj60q7/files/wandb-summary.json
+wandb/run-20260317_001753-f11rpwh3/run-f11rpwh3.wandb
+wandb/run-20260317_001753-f11rpwh3/files/config.yaml
+wandb/run-20260317_001753-f11rpwh3/files/requirements.txt
+wandb/run-20260317_001753-f11rpwh3/files/wandb-metadata.json
+wandb/run-20260317_001753-f11rpwh3/files/wandb-summary.json
+wandb/run-20260317_093035-9u4hn74z/run-9u4hn74z.wandb
+wandb/run-20260317_093035-9u4hn74z/files/config.yaml
+wandb/run-20260317_093035-9u4hn74z/files/requirements.txt
+wandb/run-20260317_093035-9u4hn74z/files/wandb-metadata.json
+wandb/run-20260317_093035-9u4hn74z/files/wandb-summary.json
+wandb/run-20260317_094253-f11rpwh3/run-f11rpwh3.wandb
+wandb/run-20260317_094253-f11rpwh3/files/config.yaml
+wandb/run-20260317_094253-f11rpwh3/files/requirements.txt
+wandb/run-20260317_094253-f11rpwh3/files/wandb-metadata.json
+wandb/run-20260317_094253-f11rpwh3/files/wandb-summary.json
+wandb/run-20260317_094814-f11rpwh3/run-f11rpwh3.wandb
+wandb/run-20260317_094814-f11rpwh3/files/config.yaml
+wandb/run-20260317_094814-f11rpwh3/files/requirements.txt
+wandb/run-20260317_094814-f11rpwh3/files/wandb-metadata.json
+wandb/run-20260317_094814-f11rpwh3/files/wandb-summary.json
+wandb/run-20260317_095141-f11rpwh3/run-f11rpwh3.wandb
+wandb/run-20260317_095141-f11rpwh3/files/config.yaml
+wandb/run-20260317_095141-f11rpwh3/files/requirements.txt
+wandb/run-20260317_095141-f11rpwh3/files/wandb-metadata.json
+wandb/run-20260317_095141-f11rpwh3/files/wandb-summary.json
+wandb/run-20260317_104503-f11rpwh3/run-f11rpwh3.wandb
+wandb/run-20260317_104503-f11rpwh3/files/requirements.txt
+wandb/run-20260317_104503-f11rpwh3/files/wandb-metadata.json
+outputs/grpo_run/checkpoint-60 copy/added_tokens.json
+outputs/grpo_run/checkpoint-60 copy/config.json
+outputs/grpo_run/checkpoint-60 copy/generation_config.json
+outputs/grpo_run/checkpoint-60 copy/merges.txt
+outputs/grpo_run/checkpoint-60 copy/model.safetensors
+outputs/grpo_run/checkpoint-60 copy/special_tokens_map.json
+outputs/grpo_run/checkpoint-60 copy/tokenizer_config.json
+outputs/grpo_run/checkpoint-60 copy/tokenizer.json
+outputs/grpo_run/checkpoint-60 copy/trainer_state.json
+outputs/grpo_run/checkpoint-60 copy/vocab.json
+outputs/grpo_run/checkpoint-60 copy/checkpoint-65/added_tokens.json
+outputs/grpo_run/checkpoint-60 copy/checkpoint-65/config.json
+outputs/grpo_run/checkpoint-60 copy/checkpoint-65/generation_config.json
+outputs/grpo_run/checkpoint-60 copy/checkpoint-65/merges.txt
+outputs/grpo_run/checkpoint-60 copy/checkpoint-65/model.safetensors
+outputs/grpo_run/checkpoint-60 copy/checkpoint-65/special_tokens_map.json
+outputs/grpo_run/checkpoint-60 copy/checkpoint-65/tokenizer_config.json
+outputs/grpo_run/checkpoint-60 copy/checkpoint-65/tokenizer.json
+outputs/grpo_run/checkpoint-60 copy/checkpoint-65/trainer_state.json
+outputs/grpo_run/checkpoint-60 copy/checkpoint-65/vocab.json
+outputs/grpo_run/checkpoint-65 copy/added_tokens.json
+outputs/grpo_run/checkpoint-65 copy/config.json
+outputs/grpo_run/checkpoint-65 copy/generation_config.json
+outputs/grpo_run/checkpoint-65 copy/merges.txt
+outputs/grpo_run/checkpoint-65 copy/model.safetensors
+outputs/grpo_run/checkpoint-65 copy/special_tokens_map.json
+outputs/grpo_run/checkpoint-65 copy/tokenizer_config.json
+outputs/grpo_run/checkpoint-65 copy/tokenizer.json
+outputs/grpo_run/checkpoint-65 copy/trainer_state.json
+outputs/grpo_run/checkpoint-65 copy/vocab.json
+outputs/grpo_run/checkpoint-84/added_tokens.json
+outputs/grpo_run/checkpoint-84/config.json
+outputs/grpo_run/checkpoint-84/generation_config.json
+outputs/grpo_run/checkpoint-84/merges.txt
+outputs/grpo_run/checkpoint-84/model.safetensors
+outputs/grpo_run/checkpoint-84/special_tokens_map.json
+outputs/grpo_run/checkpoint-84/tokenizer_config.json
+outputs/grpo_run/checkpoint-84/tokenizer.json
+outputs/grpo_run/checkpoint-84/trainer_state.json
+outputs/grpo_run/checkpoint-84/vocab.json
+outputs/grpo_run/checkpoint-85/added_tokens.json
+outputs/grpo_run/checkpoint-85/config.json
+outputs/grpo_run/checkpoint-85/generation_config.json
+outputs/grpo_run/checkpoint-85/merges.txt
+outputs/grpo_run/checkpoint-85/model.safetensors
+outputs/grpo_run/checkpoint-85/special_tokens_map.json
+outputs/grpo_run/checkpoint-85/tokenizer_config.json
+outputs/grpo_run/checkpoint-85/tokenizer.json
+outputs/grpo_run/checkpoint-85/trainer_state.json
+outputs/grpo_run/checkpoint-85/vocab.json
+outputs/grpo_run/current_model/added_tokens.json
+outputs/grpo_run/current_model/config.json
+outputs/grpo_run/current_model/generation_config.json
+outputs/grpo_run/current_model/merges.txt
+outputs/grpo_run/current_model/model.safetensors
+outputs/grpo_run/current_model/special_tokens_map.json
+outputs/grpo_run/current_model/tokenizer_config.json
+outputs/grpo_run/current_model/tokenizer.json
+outputs/grpo_run/current_model/vocab.json
+outputs/grpo_run/final_model/added_tokens.json
+outputs/grpo_run/final_model/config.json
+outputs/grpo_run/final_model/generation_config.json
+outputs/grpo_run/final_model/merges.txt
+outputs/grpo_run/final_model/model.safetensors
+outputs/grpo_run/final_model/special_tokens_map.json
+outputs/grpo_run/final_model/tokenizer_config.json
+outputs/grpo_run/final_model/tokenizer.json
+outputs/grpo_run/final_model/trainer_state.json
+outputs/grpo_run/final_model/vocab.json

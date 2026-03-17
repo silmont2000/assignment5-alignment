@@ -275,7 +275,7 @@ def main() -> None:
     parser.add_argument(
         "--math-validation-path",
         type=str,
-        default="/data/a5-alignment/MATH/validation.json",
+        default="/root/autodl-tmp/assignment5-alignment/MATH/validation.jsonl",
         help="MATH validation file path (JSON or JSONL).",
     )
     parser.add_argument(
@@ -311,10 +311,12 @@ def main() -> None:
 
     # vLLM / 采样参数
     parser.add_argument("--num-gpus", type=int, default=1, help="Tensor parallel size.")
-    parser.add_argument("--temperature", type=float, default=0.0)
+    parser.add_argument("--temperature", type=float, default=1.0)
     parser.add_argument("--top-p", type=float, default=1.0)
     parser.add_argument("--max-tokens", type=int, default=1024)
+    
     parser.add_argument("--max-model-len", type=int, default=4096)
+    parser.add_argument("--stop-at-answer", action="store_true", help="Stop generation at </answer>.")
 
     args = parser.parse_args()
 
@@ -354,11 +356,15 @@ def main() -> None:
         trust_remote_code=True,
         max_model_len=args.max_model_len,
     )
-    sampling_params = SamplingParams(
-        temperature=args.temperature,
-        top_p=args.top_p,
-        max_tokens=args.max_tokens,
-    )
+    sampling_params_kwargs: dict[str, Any] = {
+        "temperature": args.temperature,
+        "top_p": args.top_p,
+        "max_tokens": args.max_tokens,
+    }
+    if bool(args.stop_at_answer):
+        sampling_params_kwargs["stop"] = ["</answer>"]
+        sampling_params_kwargs["include_stop_str_in_output"] = True
+    sampling_params = SamplingParams(**sampling_params_kwargs)
 
     evaluate_vllm(
         vllm_model=vllm_model,

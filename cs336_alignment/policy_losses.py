@@ -53,10 +53,9 @@ def compute_grpo_clip_loss(
     ratio_t = exp(logπ_t - logπ_old_t)
 
     PPO-style clipping 的关键点：
-    - advantage >= 0：取 min(ratio*A, clip(ratio)*A)
-    - advantage <  0：取 max(ratio*A, clip(ratio)*A)
+    - objective = min(ratio*A, clip(ratio)*A)
 
-    这个“按 advantage 正负选 min/max”是为了保证 clipping 的方向正确。
+    这里的 min 会自动在不同 advantage 符号下起到正确的 clipping 效果。
 
     Returns:
         loss: (batch, seq_len) per-token loss
@@ -79,11 +78,7 @@ def compute_grpo_clip_loss(
     adv = advantages
     surrogate = ratio * adv
     surrogate_clipped = clipped_ratio * adv
-    obj = torch.where(
-        adv >= 0,
-        torch.minimum(surrogate, surrogate_clipped),
-        torch.maximum(surrogate, surrogate_clipped),
-    )
+    obj = torch.minimum(surrogate, surrogate_clipped)
     loss = -obj
 
     metadata = {

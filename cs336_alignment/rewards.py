@@ -80,8 +80,8 @@ def compute_group_normalized_rewards(
     advantages = grouped - group_mean
 
     if normalize_by_std:
-        # 用 population std（unbiased=False），更贴近 RL 实践，也更稳定可复现。
-        group_std = grouped.std(dim=1, unbiased=False, keepdim=True)
+        # 用 sample std（unbiased=True），与 torch.std 默认行为一致。
+        group_std = grouped.std(dim=1, unbiased=True, keepdim=True)
         advantages = advantages / (group_std + advantage_eps)
 
     normalized_rewards = advantages.view(-1)
@@ -94,4 +94,3 @@ def compute_group_normalized_rewards(
     }
 
     return normalized_rewards, raw_rewards, metadata
-
